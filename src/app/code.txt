@@ -1,0 +1,20 @@
+service part = getData(codebookNumber: string): Observable<any> {
+    const url = `http://localhost:7000/api/codebook/${codebookNumber}`;
+    return this.http.get(url);
+  }
+
+
+
+  html part = <ul>
+            <li *ngFor="let item of data">{{ item.title }} - {{ item.lesson}}</li>
+        </ul>
+
+
+
+        components.ts part = getData() {
+  this.connect.getData(this.codebookNumber).subscribe(
+    (response) => {
+      this.data = response['data'];
+    }
+  );
+}

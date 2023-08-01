@@ -1,0 +1,168 @@
+body {
+
+    background-color: aquamarine;
+    height: 150vh;
+}
+
+h1 {
+    background-color: rgb(53, 61, 61);
+    color: beige;
+
+}
+
+.asd {
+    max-width: 90%;
+    height: auto;
+    text-align: justify;
+    margin: 5%;
+
+    font-size: medium;
+    font-weight: 300;
+}
+
+button {
+    margin: 10% 0% 0 50%;
+}
+
+span {
+    margin: 0 0 0 20px;
+}
+
+h1 img {
+    margin: 0 0 0 10px;
+}
+
+.contain {
+    max-width: 300px;
+
+
+}
+
+form {
+    margin-left: 50%;
+    margin-right: 5%;
+
+
+}
+
+.gsm {
+    max-width: 400px;
+    height: 16%;
+    background-color: rgb(191, 217, 221);
+    border-radius: 10px;
+    margin-left: 50%;
+    margin-right: 5%;
+    margin-bottom: 0px;
+
+
+
+
+
+}
+
+.gsm h6 p h3 {
+    text-align: center;
+    margin: 5%;
+}
+
+#qw {
+
+    background-color: aquamarine;
+    width: 150px;
+    height: auto;
+    font-weight: 900;
+    border-radius: 30px;
+
+
+
+
+
+}
+
+#ui {
+
+    background-color: aquamarine;
+    width: 150px;
+    height: auto;
+    font-weight: 900;
+    border-radius: 30px;
+    margin-top: 0px;
+
+}
+
+#dj {
+    text-align: center;
+    padding: 10px;
+    max-width: 400px;
+    font-weight: 700;
+
+
+
+}
+
+.rescard {
+    width: 60%;
+    height: auto;
+    margin: 20px;
+    background-color: aquamarine;
+    border-radius: 20px;
+    margin-left: 40px;
+}
+
+.rescard p {
+    padding: 30px;
+
+}
+
+#emailHelp {
+    height: auto;
+}
+
+.stodata {
+    width: 300px;
+    height: 500px;
+    margin-left: 20px;
+    background-color: rgba(128, 128, 128, 0.3);
+
+    border-radius: 20px;
+    margin-top: 0%;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    margin-bottom: 10px;
+}
+
+.stodata h3,
+.stodata p {
+    opacity: 1;
+
+}
+
+.container {
+    position: relative;
+}
+
+@media (max-width: 720px) {
+    .stodata {
+        position: static;
+        margin-top: 20px;
+        height: 100vh;
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(53, 61, 61);
+    width: 100%;
+    height: 50px;
+    color: rgb(241, 231, 231);
+
+    text-align: end;
+
+}
+
+.footer h6 {
+    padding: 20px;
+}

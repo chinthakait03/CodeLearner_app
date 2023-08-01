@@ -1,0 +1,119 @@
+<body>
+    <h1 id="op" class=" text-start fw-bold fst-italic "><img src="./assets/logo/calendar-range-fill.svg "
+            alt="logo-icon"><span>CodeLearner </span> </h1>
+
+
+    <div class="asd   ">
+
+        <p *ngIf="all && cardInif">
+            Coding,
+            or programming, is the
+            process of creating instructions for computers using
+            programming
+            languages. It
+            enables the development of software applications and websites. Coding requires logical thinking,
+            problem-solving skills, and attention to detail. Collaboration and continuous learning are important for
+            success. It is a powerful skill that empowers individuals to create innovative solutions and shape the
+            digital world we live in.
+        </p>
+
+
+    </div>
+
+
+
+    <form *ngIf="!formData && formVisible && cardInif" id="tm" [formGroup]="Nameform" class="contain"
+        (ngSubmit)="hide()">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"> Name</label>
+            <input type="email" class="form-control" formControlName="fullname" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+            <div style="color: red;"
+                *ngIf="f['fullname'].touched && f['fullname'].invalid && f['fullname'].errors && f['fullname'].errors['required']">
+                Enter your nic name .</div>
+        </div>
+
+        <div *ngIf="all && cardInif" class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"> Email address</label>
+            <input type="email" class="form-control" formControlName="emailaddress" id="exampleInputPassword1">
+            <div style="color: red;"
+                *ngIf="f['emailaddress'].touched && f['emailaddress'].invalid && f['emailaddress'].errors && f['emailaddress'].errors['required']">
+                Email address is required.</div>
+        </div>
+
+        <button *ngIf="all && cardInif" type="submit" class="btn btn-primary"
+            [disabled]="Nameform.invalid">Submit</button>
+    </form>
+
+
+    <div class="gsm" *ngIf="formData && all && cardInif">
+        <h6>
+            <p>
+                <br>
+                <b>
+                    Student: {{ formData?.fullName }}
+                    <h3>Welcome to CodeLearner</h3>
+                </b>
+
+            </p>
+
+        </h6>
+    </div>
+
+    <br>
+    <p *ngIf="all && cardInif" id="dj" style="color: red;"> {{info}}</p>
+    <br>
+    <button id="qw" *ngIf="stbtn && all && cardInif" (click)="allHide()"> Start game</button>
+    <button id="ui" *ngIf="afbtn && all && cardInif" (click)="allHide()"> <span style="color: brown;">welcome </span>{{
+        formData?.fullName }}</button>
+
+
+    <form *ngIf="open && cardInif" [formGroup]="dataForm" (ngSubmit)="cardIn(); dataForm.reset()">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter your learning part..(1 to 5 numbers)</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                formControlName="codebookNumber">
+            <div *ngIf="m['codebookNumber'].touched && m['codebookNumber'].invalid && m['codebookNumber'].errors && m['codebookNumber'].errors['required']"
+                class="error" style="color: red;">
+                Enter number one to five numbers</div>
+
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary" [disabled]="!dataForm.valid">Submit</button>
+    </form>
+
+
+    <div class="rescard" *ngIf="cardInifroot">
+        <ul>
+            <li *ngFor="let item of data?.data">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.lesson }}</p>
+            </li>
+        </ul>
+    </div>
+    <button (click)="getdata()" *ngIf=" cardInifroot " class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">Back</button>
+
+    <div class="stodata" *ngIf="open && cardInif">
+        <ul>
+            <li *ngFor="let item of data?.data">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.lesson }}</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer">
+
+
+
+        <h6>powered by <b>Chinthaka</b></h6>
+
+    </div>
+
+
+
+
+</body>
